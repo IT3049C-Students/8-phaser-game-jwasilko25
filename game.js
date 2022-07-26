@@ -24,8 +24,8 @@ var game = new Phaser.Game(config);
 
 function preload ()
 {
-    this.load.image('food', 'assets/spritesheets/food.png');
-    this.load.image('body', 'assets/spritesheets/body.png');
+    this.load.image('food', 'assets/food.png');
+    this.load.image('body', 'assets/body.png');
 }
 
 function create ()
@@ -123,13 +123,6 @@ function create ()
 
         move: function (time)
         {
-            /**
-            * Based on the heading property (which is the direction the pgroup pressed)
-            * we update the headPosition value accordingly.
-            * 
-            * The Math.wrap call allow the snake to wrap around the screen, so when
-            * it goes off any of the sides it re-appears on the other.
-            */
             switch (this.heading)
             {
                 case LEFT:
